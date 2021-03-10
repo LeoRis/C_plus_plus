@@ -37,7 +37,6 @@ void Birthday::printDate(){
 People::People(string x, Birthday bo)
 : name(x), dateOfBirth(bo)
 {
-
 }
 
 void People::printInfo(){
