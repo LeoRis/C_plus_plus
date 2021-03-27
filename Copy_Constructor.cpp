@@ -6,7 +6,7 @@ using namespace std;
 class Rational {
 public:
 	Rational(int n = 0, int d = 1) : num(n), den(d) // More powerfull option for initializing variables.
-													// Const members and reference members can only be initialized in an initialization list.
+							// Const members and reference members can only be initialized in an initialization list.
 	{
 		//num = n;	Variable initialization can be done it both ways.
 		//den = d;	
@@ -19,6 +19,7 @@ public:
 	void print() const {
 		cout << num << '/' << den;
 	}
+	~Rational(){}
 
 private:
 	int num, den;
