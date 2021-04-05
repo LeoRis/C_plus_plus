@@ -18,7 +18,7 @@ int main() {
 	ytChannel.Name = "The Pirate";
 	ytChannel.OwnerName = "Sparrow";
 	ytChannel.SubscriberCount = 5000;
-	ytChannel.PublishedVideoTitles = { "C++ for begginers", "Intermediate Course", "Advanced C++" };
+	ytChannel.PublishedVideoTitles = { "C++ for beginners", "Intermediate Course", "Advanced C++" };
 
 	cout << "Name: " << ytChannel.Name << endl;
 	cout << "Owner: " << ytChannel.OwnerName << endl;
