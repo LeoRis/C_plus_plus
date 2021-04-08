@@ -28,11 +28,21 @@ public:
 			m_denominator /= gcd;
 		}
 	}
-
+	
+	friend Fraction operator *(const Fraction& obj1); // The prototype for the operator overload function on row 38
 	friend Fraction operator *(const Fraction& obj1, const Fraction& obj2);
 	friend Fraction operator *(const Fraction& obj1, int value);
 	friend Fraction operator *(int value, const Fraction& obj2);
 };
+
+Fraction operator *(const Fraction& obj1) {		  // This form of overload can be used as well.
+	Fraction temp;
+
+	temp.m_numerator = m_numerator + obj1.m_numerator
+	temp.m_denominator = m_denominator + obj1.m_denominator
+
+	return temp;
+}
 
 Fraction operator *(const Fraction& obj1, const Fraction& obj2) {
 	int obj_numerator = obj1.m_numerator * obj2.m_numerator;
