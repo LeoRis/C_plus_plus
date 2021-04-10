@@ -73,6 +73,38 @@ public:
 	}
 };
 
+class Car : public Terrain_Vehicle {
+private:
+	string Manufacturer;
+	int Doors;
+	string Color;
+
+public:
+	Car(){}
+	Car(int size, int wheel_Number, string Model, string manufacturer, int doors, string color)
+		: Terrain_Vehicle(size, wheel_Number, Model), Manufacturer(manufacturer), Doors(doors), Color(color){}
+	~Car(){}
+
+	void print() {
+		cout << m_Size << ' ' << m_Year << ' ' << m_Mileage << ' ' << Manufacturer << ' ' << Doors << ' ' << Color << endl;
+	}
+
+	Car& set_Manufacturer(string manufacturer) {
+		Manufacturer = manufacturer;
+		return *this;
+	}
+
+	Car& set_Doors(int doors) {
+		Doors = doors;
+		return *this;
+	}
+
+	Car& set_Color(string color) {
+		Color = color;
+		return *this;
+	}
+};
+
 class Amphibious_Vehicle : public Vehicle {
 private:
 	int Depth;
@@ -92,9 +124,9 @@ int main() {
 	Vehicle Transport;
 
 	Terrain_Vehicle Train(3, 20, "Train");
-	Terrain_Vehicle Car;
-	Car.set_Year(1990).set_Size(1).set_Mileage(100);
-	Transport = Car;
+	Terrain_Vehicle Jeep;
+	Jeep.set_Year(1990).set_Size(1).set_Mileage(100);
+	Transport = Jeep;
 	Transport.print();
 
 	Amphibious_Vehicle Boat(3, 100, "Petrol");
@@ -107,4 +139,8 @@ int main() {
 
 	Train.print();
 	Boat.print();
+	
+	Car GT40;
+	GT40.set_Manufacturer("Ford").set_Doors(small).set_Color("Blue").set_Size(2).set_Year(2020).set_Mileage(500);
+	GT40.print();
 }
