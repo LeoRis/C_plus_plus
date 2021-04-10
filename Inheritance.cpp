@@ -141,6 +141,6 @@ int main() {
 	Boat.print();
 	
 	Car GT40;
-	GT40.set_Manufacturer("Ford").set_Doors(small).set_Color("Blue").set_Size(2).set_Year(2020).set_Mileage(500);
+	GT40.set_Manufacturer("Ford").set_Doors(2).set_Color("Blue").set_Size(2).set_Year(2020).set_Mileage(500);
 	GT40.print();
 }
