@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class Shape {
+class Shape { 	// Abstract class
 public:
 	virtual void Draw() const = 0; // Pure virtual function
 	virtual ~Shape(){}
