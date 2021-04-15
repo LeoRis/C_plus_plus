@@ -56,11 +56,11 @@ int main() {
 	Derived4 d4;
 	
 	x = d4.f(1);
-	//x = d4.f();			// f() version hidden
-	//d4.f(s);			// String version hidden
+	//x = d4.f();		// f() version hidden
+	//d4.f(s);		// String version hidden
 
 	Base& br = d4;		// Upcast
-	//br.f(1);			// Derived version unavailable
+	//br.f(1);		// Derived version unavailable
 
 	br.f();
 	br.f(s);
