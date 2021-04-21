@@ -133,6 +133,8 @@ int main() {
 	Cameras[3] = &k2;
 
 	smallest_Price(Cameras, 4);
+	
+	delete[] Cameras;
 
 	return 0;
 }
