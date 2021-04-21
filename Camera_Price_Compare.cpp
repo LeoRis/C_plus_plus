@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 #pragma warning(disable : 4996)
 
 using namespace std;
@@ -43,7 +44,8 @@ protected:
 
 public:
 	DSLR(){}
-	DSLR(const char* model, double bPrice, int mPixel, const char* lType, double lPrice) : Camera(model, bPrice, mPixel), Lens_Price(lPrice) { strcpy(Lens_Type, lType); }
+	DSLR(const char* model, double bPrice, int mPixel, const char* lType, double lPrice) 
+		: Camera(model, bPrice, mPixel), Lens_Price(lPrice) { strcpy(Lens_Type, lType); }
 	DSLR(const DSLR& obj) : Camera(obj) {
 		strcpy(Lens_Type, obj.Lens_Type);
 		Lens_Type[19] = '\0';
