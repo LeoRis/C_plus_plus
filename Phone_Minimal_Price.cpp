@@ -159,5 +159,7 @@ int main() {
 
 	cout << "The minimal price is: "; compare(Telephones, 3);
 
+	delete[] Telephones;
+	
 	return 0;
 }
