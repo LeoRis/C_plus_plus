@@ -76,7 +76,8 @@ private:
 
 public:
 	DigitalClock() {}
-	DigitalClock(int hour, int minute, int second, const char* manufacturer, int hundreds, char format) : Clock(hour, minute, second, manufacturer), m_hundreds(hundreds), m_format(format) {}
+	DigitalClock(int hour, int minute, int second, const char* manufacturer, int hundreds, char format) 
+		: Clock(hour, minute, second, manufacturer), m_hundreds(hundreds), m_format(format) {}
 	DigitalClock(const DigitalClock& obj) : Clock(obj), m_hundreds(obj.m_hundreds), m_format(obj.m_format) {}
 	~DigitalClock() {}
 
