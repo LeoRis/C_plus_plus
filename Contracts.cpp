@@ -53,7 +53,7 @@ public:
 			contract_signers[i] = new char[20];
 			strcpy(contract_signers[i], contract_signers[i]);
 		}
-		date, _date;
+		date = _date;
 	}
 	Contract(const Contract& obj) {
 		contract_number = obj.contract_number;
@@ -194,7 +194,7 @@ public:
 
 int main() {
 
-	char* signers[3] = { "aaa", "bbb", "ccc" };
+	const char* signers[3] = { "John", "Jack", "Jane" };
 	Contract d1(10, "Cat1", signers, 3, Date(10, 10, 2020));
 	Contract d2(11, "Cat2", signers, 2, Date(11, 11, 2021));
 
