@@ -19,7 +19,13 @@ public:
 	~Date(){}
 
 	bool operator < (Date& obj) {
-		if (m_year == obj.m_year && m_month < obj.m_month && m_day < obj.m_day) {
+		if (m_year < obj.m_year) {
+			return true;
+		}
+		else if (m_year == obj.m_year && m_month < obj.m_month) {
+			return true;
+		}
+		else if (m_year == obj.m_year && m_month < obj.m_month && m_day < obj.m_day) {
 			return true;
 		}
 		else {
@@ -175,7 +181,7 @@ public:
 	Contract_Cluster signed_Contracts(Date& date) {
 		Contract_Cluster temp;
 		for (int i = 0; i < number_of_contract_objects; i++) {
-			if (!(contracts[i].get_Date() < date) && !(date < contracts[i].get_Date())) {
+			if (!(contracts[i].get_Date() < date)) { // && !(date < contracts[i].get_Date()) - Should belong here, but not working.
 				temp += contracts[i];
 			}
 		}
