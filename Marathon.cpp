@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
@@ -119,6 +120,8 @@ public:
 };
 
 int main() {
+	
+	TBC
 
 	return 0;
 }
