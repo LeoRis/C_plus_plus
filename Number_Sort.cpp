@@ -7,7 +7,7 @@ int main() {
     int n;
     int temp;
 
-    cout << "How many numbers do you want to check?" << endl;
+    cout << "How many numbers do you want to sort?" << endl;
     cin >> n;
 
     int sortingArray[n];
