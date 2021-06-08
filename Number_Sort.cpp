@@ -33,6 +33,12 @@ int main() {
     for(int k = 0; k < n; k++){
         cout << "Number " << k << " is: "<< sortingArray[k] << endl;
     }
+    
+    cout << "Here is the array in descending order: " << endl;
+
+    for(int k = n - 1; k >= 0; k--){
+        cout << "Number " << k << " is: "<< sortingArray[k] << endl;
+    }
 
    return 0;
 }
